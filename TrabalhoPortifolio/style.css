@@ -1,0 +1,306 @@
+/* ESTILO PAGINA GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+  
+}
+
+body{
+    background-color: darkorange;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+/* ESTILO CABEÇALHO */
+header{
+    padding: 40px 4%;
+}
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header a{
+    color:black;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    transition: .3s;
+}
+
+header a:hover{
+    color: white;
+    transform: scale(1.25);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .Contato button{
+    color:white;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: black;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* ESTILO TOPO DO SITE */
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site.flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site .txt-topo-site h1{
+    color: black;
+    font-size:  44px;
+    line-height: 42px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: black;
+    font-size: 36px;
+    line-height: 34px;
+    margin: 40px 10px;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0%;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* ESTILO SOBRE MIM */
+section.sobre-mim{
+    padding: 40px 4%;
+}
+
+section.sobre-mim .flex{
+    align-items: center;
+    gap: 45px;
+}
+
+.sobre-mim .txt-sobre h1{
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 20px;
+}
+
+.sobre-mim .txt-sobre h1 span{
+    display: block;
+}
+
+.sobre-mim .txt-sobre p{
+    color: black;
+    margin: 5px;
+    font-size: 20px;
+}
+
+/* ESTILO FORMAÇÃO */
+section.formacao{
+    padding: 30px 4%;
+}
+
+.formacao .txt-formacao h1{
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+
+.formacao .txt-formacao h2{
+    font-size: 28px;   
+}
+
+.formacao .txt-formacao p{
+    font-size: 18px;
+}
+
+.formacao .txt-formacao p span{
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ESTILO PROJETO */
+section.txt-projetos{
+    padding: 40px 4%;
+}
+
+.projetos .txt-projetos h1{
+    font-size: 44px;
+    margin-bottom: 30px;
+}
+
+.projetos .txt-projetos img{
+    justify-content: center;
+    margin: 20px;
+}
+
+/* ESTILO CONTATO */
+section.contato{
+    padding: 40px 4%;
+}
+
+.contato h1{
+    font-size: 44px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: white;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: black;
+}
+
+form textarea{
+    resize: none;
+}
+
+form .enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .enviar input{
+    width: 100px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ESTILO RODAPÉ */
+footer{
+    padding: 20px 4%;
+    margin-top: 80px;
+    box-shadow: 0 0 20px rgba(255, 251, 251, 0.234);
+}
+
+footer .line-footer{
+    padding: 10px 0;
+}
+
+.borda{
+    border-top: 2px solid rgba(13, 13, 13, 0.251);
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+/* RESPONSIVIDADE DO SITE */
+@media screen and (max-width: 1105px){
+    /* CLASSES GERAIS */
+    .flex{
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+    
+    /* CABEÇALHO */
+    header .Contato button{
+        padding: 10px 15px;
+        margin-right: 10px;
+    }
+
+    /* TOPO DO SITE */
+    section.topo-do-site{
+        padding: 40px 8%;
+    }
+
+    section.topo-do-site .flex{
+        gap: 20px;
+    }
+
+    .topo-do-site .txt-topo-site h1{
+        font-size:  34px;
+    }
+
+    /* SOBRE MIM */
+    section.sobre-mim{
+        padding: 40px 8%;
+    }
+
+    .sobre-mim .txt-sobre p{
+        font-size: 26px;
+    }
+
+    /* FORMAÇÃO */
+    section.formacao{
+        padding: 40px 8%;
+    }
+    
+    .formacao .txt-formacao h2{
+        font-size: 28px;   
+    }
+    
+    .formacao .txt-formacao p{
+        font-size: 20px;
+    }
+ 
+    /* PROJETOS */
+    section.txt-projetos{
+        padding: 40px 8%;
+    }
+    .projetos .txt-projetos h1{
+        text-align: center;
+        margin: 30px;
+    }
+    
+    .projetos .txt-projetos img{
+        margin-left: 50px;
+    }
+
+    /* CONTATO */
+    section.contato{
+        padding: 40px 8%;
+    }
+}
